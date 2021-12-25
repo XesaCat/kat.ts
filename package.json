@@ -1,0 +1,33 @@
+{
+    "name": "kat.ts",
+    "version": "0.1.0",
+    "description": "A discord bot written in Typescript",
+    "authors": [
+        {
+            "email": "neon@xesacat.xyz",
+            "name": "XesaCat",
+            "url": "https://github.com/XesaCat"
+        },
+        {
+            "email": "ironman@xesacat.xyz",
+            "name": "Ironman",
+            "url": "https://github.com/ironman-glitch"
+        }
+    ],
+    "main": "dist/index.js",
+    "license": "SEE LICENSE IN license.txt",
+    "scripts": {
+        "build": "yarn clean && yarn lint && tsc --build",
+        "clean": "rm dist/ -r 2>/dev/null || true",
+        "lint": "prettier -c . --write",
+        "start": "yarn build && node ."
+    },
+    "dependencies": {
+        "discord.js": "^13.4.0",
+        "dotenv": "^10.0.0"
+    },
+    "devDependencies": {
+        "prettier": "^2.5.1",
+        "typescript": "^4.5.4"
+    }
+}
